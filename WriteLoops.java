@@ -128,13 +128,15 @@ public class WriteLoops {
         return w;
     }
 
-    public void simpleLoops() {
+    public int simpleLoops() {
         int i = 0;
+        int w = 0;
 
         // sample while loop
         while (i <= 5) {
             System.out.println("Eww.");
             i = i + 1;
+            w = w +1;
         }
 
         // sample do...while loop
@@ -143,6 +145,7 @@ public class WriteLoops {
             System.out.println("Eww.");
             i = i - 1;
         } while (i > 0);
+        return w;
         // what's the primary difference between them?!?
         //one counts up, other counts down(would also run once regardless of value of i
     }
@@ -248,7 +251,7 @@ public class WriteLoops {
         return w;
     }
 
-    int[] threes_array = { 3, 6, 9, 12, 15, 18, 21 };
+    int[] threes_array = new int[]{ 3, 6, 9, 12, 15, 18, 21 };
 
     // Foo is method that add the first 7 factors of three together and prints
     // out the sum of them all.
@@ -259,7 +262,7 @@ public class WriteLoops {
 
         // this is a so called Enhanced for loop
         for (int index : threes_array) {
-            sumOfThrees = sumOfThrees + threes_array[index];
+            sumOfThrees += index;
             // calling
             w = w + 1;
             // each time through the inner loop
@@ -332,7 +335,7 @@ public class WriteLoops {
                 w = w + 1;
                 // each time inside the loop
             }
-        } sendJuniorBackToSchool("August 27");
+        } sendJuniorBackToSchool("First Day of School");
         return w;
     }
 
@@ -344,12 +347,12 @@ public class WriteLoops {
     public int tallyVote1() {
         int w = 0;
         int numberOfVotes = voteTallies.length;
-
- 
+        for (int i=0; i<numberOfVotes; i++) {
+            System.out.println(voteTallies[i]);
             // calling
             w = w + 1;
             // each time through the inner loop
-        
+        }
         return w;
     }
 
@@ -358,13 +361,15 @@ public class WriteLoops {
     // where you are.
     public int tallyVote2() {
         int w = 0;
+        int idx = 0;
         int numberOfVotes = voteTallies.length;
-
-
+        while (idx < numberOfVotes) {
+            System.out.println(voteTallies[idx]);
+            idx++;
             // calling
             w = w + 1;
             // each time through the inner loop
-        
+        }
         return w;
     }
 
@@ -418,7 +423,8 @@ public class WriteLoops {
         if (!timeForSchool.equalsIgnoreCase("First Day of School")) {
             throw new IllegalArgumentException();
         }
-        /* dammit, mow the yard */}
+        /* dammit, mow the yard */
+    }
 
     // private Supplier<Boolean> isSummer = () -> {
     //     int i = 0;
@@ -430,10 +436,10 @@ public class WriteLoops {
         private int summer = 0;
         private boolean isSummer() {
             if (summer == 3) {
-                return true;
+                return false;
             }
             summer++;
-            return false;
+            return true;
         }
     private void sendEmergencyText(String mesg, String phone) {
     }
