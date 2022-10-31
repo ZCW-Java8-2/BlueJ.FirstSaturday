@@ -123,4 +123,57 @@ public class WriteLoopsTest
         WriteLoops writeLoo1 = new WriteLoops();
         assertEquals(3, writeLoo1.checkServerStatus());
     }
+
+    @Test
+    public void driveHome() {
+        WriteLoops writeLoo1 = new WriteLoops();
+        assertEquals(6, writeLoo1.driveHome());
+    }
+
+    @Test
+    public void loop50by7() {
+        WriteLoops writeLoo1 = new WriteLoops();
+        assertEquals(7, writeLoo1.loop50by7());
+    }
+
+    @Test
+    public void foo() {
+        WriteLoops writeLoo1 = new WriteLoops();
+        assertEquals(7, writeLoo1.foo());
+    }
+
+    @Test
+    public void rewriteFooAsFor() {
+        WriteLoops writeLoo1 = new WriteLoops();
+        assertEquals(6, writeLoo1.rewriteFooAsFor());
+    }
+
+    @Test
+    public void rewriteFooAsWhile() {
+        WriteLoops writeLoo1 = new WriteLoops();
+        assertEquals(6, writeLoo1.rewriteFooAsWhile());
+    }
+
+    @Test
+    public void manageYardAndJunior() {
+        WriteLoops writeLoo1 = new WriteLoops();
+        assertEquals(3, writeLoo1.manageYardAndJunior());
+    }
+
+    @Test
+    public void tallyVote1() {
+        WriteLoops writeLoo1 = new WriteLoops();
+        assertEquals(13, writeLoo1.tallyVote1());
+    }
+
+    @Test
+    public void tallyVote2() {
+        WriteLoops writeLoo1 = new WriteLoops();
+        assertEquals(13, writeLoo1.tallyVote2());
+    }
+    @Test
+    public void simpleLoops() {
+        WriteLoops writeLoo1 = new WriteLoops();
+        assertEquals(6, writeLoo1.simpleLoops());
+    }
 }
